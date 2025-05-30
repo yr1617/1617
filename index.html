@@ -2,8 +2,8 @@
 <!--
   Infographic Title: 우리 반 학생들이 (생성형) AI 를 사용하는 이유
   Date: 2025-05-30
-  Version: 1.0
-  Description: This HTML file contains an infographic summarizing a student research report on AI usage.
+  Version: 2.0
+  Description: This HTML file contains an updated infographic summarizing a student research report on AI usage.
                It includes all necessary HTML, CSS (Tailwind CSS via CDN and custom styles), and JavaScript (for Chart.js).
 -->
 <html lang="ko">
@@ -53,6 +53,12 @@
             font-size: 1.125rem; /* text-lg */
             color: var(--dark-text);
             text-align: center;
+            margin-bottom: 0.75rem; /* mb-3 */
+        }
+        .report-authors {
+            font-size: 0.875rem; /* text-sm */
+            color: #4A5568; /* text-gray-700 */
+            text-align: center;
             margin-bottom: 2rem; /* mb-8 */
         }
         .section-title {
@@ -77,7 +83,7 @@
         /* For HTML/CSS Diagram - Investigation Plan */
         .plan-step {
             display: flex;
-            align-items: center;
+            align-items: flex-start; /* Align items to the start for potentially multi-line text */
             background-color: var(--supporting-light-blue);
             padding: 1rem;
             border-radius: 0.375rem; /* rounded-md */
@@ -95,12 +101,32 @@
             justify-content: center;
             font-weight: bold;
             margin-right: 1rem; /* mr-4 */
+            margin-top: 0.125rem; /* mt-0.5 to align better with text */
         }
         .interview-quote {
             border-left: 4px solid var(--secondary-teal);
             padding-left: 1rem; /* pl-4 */
-            margin-top: 1rem; /* mt-4 */
+            margin-top: 0.5rem; /* mt-2 */
             font-style: italic;
+            color: #4A5568; /* text-gray-700 */
+        }
+        .suggestion-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem; /* mb-4 */
+        }
+        .suggestion-number {
+            flex-shrink: 0;
+            width: 2rem; /* w-8 */
+            height: 2rem; /* h-8 */
+            border-radius: 9999px; /* rounded-full */
+            background-color: var(--primary-blue);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 1rem; /* mr-4 */
         }
     </style>
 </head>
@@ -109,15 +135,15 @@
 
         <header class="mb-12">
             <h1 class="report-title">우리 반 학생들이 (생성형) AI 를 사용하는 이유</h1>
-            <p class="report-subtitle">미림마이스터고등학교 1학년 6반 1조 | 작성일: 2025년 5월 26일</p>
-            <p class="text-center text-sm text-gray-600">작성자: 김시은, 정서윤, 최예린, 황주한</p>
+            <p class="report-subtitle">1학년 6반 1조 | 작성일: 2025년 5월 26일</p>
+            <p class="report-authors">김시은 (1603), 정서윤 (1613), 최예린 (1617), 황주한 (1618)</p>
         </header>
 
         <main>
             <section id="motivation-purpose" class="mb-12">
                 <h2 class="section-title">Ⅰ. 조사 동기와 목적</h2>
                 <div class="card">
-                    <p class="mb-2"><strong class="text-primary-blue">조사 동기:</strong> AI 개발 및 연구를 위해서는 우선 사용자가 어떤 목적으로 AI를 사용하는지 파악해야 하기 때문에 우리 반 학생들의 생성형 AI 사용 이유를 조사하게 되었다.</p>
+                    <p class="mb-2"><strong class="text-primary-blue">조사 동기:</strong> AI 개발, AI 연구를 위해서는 우선 사용자가 어떤 목적으로 AI를 사용하는 지 파악해야 하기 때문에 우리 반 학생들의 생성형 AI 사용 이유를 조사했다.</p>
                     <p><strong class="text-primary-blue">조사 목적:</strong> 본 보고서의 목적은 AI와 관련된 일을 하는 사람이나 AI에 관심을 갖고 있는 사람들에게 사람들이 AI를 사용하는 이유를 제공하여, AI 개발이나 연구, 탐구 등을 돕는 것이다.</p>
                 </div>
             </section>
@@ -131,15 +157,27 @@
                     </div>
                     <div class="plan-step">
                         <div class="plan-step-icon">2</div>
-                        <div><strong class="text-primary-blue">조사 대상:</strong> 미림마이스터고 1학년 6반 학생 18명 (설문 전체, 인터뷰 2명 선정)</div>
+                        <div><strong class="text-primary-blue">조사 대상:</strong> 미림마이스터고등학교 1학년 6반 학생 18명 전체 (설문조사), 이 중 2명 선정 (대면 인터뷰)</div>
                     </div>
                     <div class="plan-step">
                         <div class="plan-step-icon">3</div>
                         <div>
-                            <strong class="text-primary-blue">조사 방법:</strong>
-                            <ul class="list-disc list-inside ml-4">
-                                <li>구글폼을 이용한 설문조사 (3개 문항)</li>
-                                <li>대면 인터뷰 (선정된 2명 대상, 3개 심층 질문)</li>
+                            <strong class="text-primary-blue">조사 방법 및 내용:</strong>
+                            <ul class="list-disc list-inside ml-4 mt-1 text-sm text-gray-700 space-y-1">
+                                <li><strong>구글폼 설문조사 (객관식 3문항):</strong>
+                                    <ul class="list-circle list-inside ml-4">
+                                        <li>생성형 AI 하루 사용 시간</li>
+                                        <li>AI 사용 이유</li>
+                                        <li>생성형 AI의 목적 달성 도움 정도</li>
+                                    </ul>
+                                </li>
+                                <li><strong>대면 인터뷰 (자유 응답 3문항):</strong>
+                                    <ul class="list-circle list-inside ml-4">
+                                        <li>AI 선택의 특별한 이유</li>
+                                        <li>AI 사용 시 가장 좋았던 점 / 문제 해결 도움 사례</li>
+                                        <li>가장 기억에 남는 AI 사용 경험</li>
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -154,5 +192,282 @@
                     <p class="mb-6 text-gray-700">1학년 6반 학생 18명을 대상으로 생성형 AI 사용에 대한 설문조사를 진행했다.</p>
 
                     <div class="mb-10">
-                        <h4 class="text-lg font-medium text-gray-800 mb-2">Q1. 생성형 AI(예: 챗GPT, Gemini 등)를 하루에 어느 정도 사용하나요?</h4>
-                
+                        <h4 class="text-lg font-medium text-gray-800 mb-1">Q1. 생성형 AI(예: 챗GPT, Gemini 등)를 하루에 어느 정도 사용하나요?</h4>
+                        <p class="text-sm text-gray-600 mb-3">학생들의 <span class="highlight">61.1%</span>가 하루 AI 사용 시간이 <span class="highlight">30분 이하</span>라고 답해, 주로 간단한 용도로 사용됨을 나타낸다. 2시간 이상 사용자는 없었다.</p>
+                        <div class="chart-container w-full max-w-md mx-auto h-72 md:h-80">
+                            <canvas id="usageTimeChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="mb-10">
+                        <h4 class="text-lg font-medium text-gray-800 mb-1">Q2. 평소에 인공지능(AI)을 사용하는 이유는 무엇인가요? (하나만 선택)</h4>
+                        <p class="text-sm text-gray-600 mb-3"><span class="highlight">과제나 학습 자료 도움(33.3%)</span>과 <span class="highlight">재미있거나 새로운 경험(33.3%)</span>이 가장 높은 비율을 차지했다. 아이디어/창작 영감(27.8%), 시간/노력 절약(5.6%) 순으로 나타났다.</p>
+                        <div class="chart-container w-full max-w-md mx-auto h-72 md:h-80">
+                            <canvas id="usageReasonChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-medium text-gray-800 mb-1">Q3. 생성형 AI가 귀하의 목적(예: 학습, 아이디어 얻기 등)에 얼마나 도움이 된다고 생각하나요?</h4>
+                         <p class="text-sm text-gray-600 mb-3">모든 응답자가 AI가 목적 달성에 도움이 된다고 평가했다. <span class="highlight">61.1%는 '매우 도움 됨'(5점)</span>, 38.9%는 '도움 됨'(4점)을 선택했으며, 부정적인 응답은 없었다.</p>
+                         <div class="chart-container w-full max-w-md mx-auto h-72 md:h-80">
+                            <canvas id="helpfulnessChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-primary-blue mb-4">인터뷰 조사 결과 요약</h3>
+                    <p class="mb-4 text-gray-700">설문 응답자 중 2명(송지영, 조세연 학생)을 대상으로 생성형 AI 사용 경험에 대한 심층 인터뷰를 진행했다. 주요 내용은 다음과 같다.</p>
+                    <div class="space-y-6">
+                        <div>
+                            <strong class="text-secondary-teal text-lg">송지영 학생</strong>
+                            <p class="interview-quote">"생성형 AI의 가장 큰 장점은 정보를 <span class="font-semibold">빠르고 간편하게</span> 얻을 수 있다는 점이다. 궁금한 점이 생겼을 때 짧은 시간 안에 원하는 답을 찾을 수 있어 공부할 때나 일상생활에서 유용하게 활용하고 있다. 특히 <span class="font-semibold">정리된 형태로 정보를 제공</span>받을 수 있어 효율적이라는 점을 강조했다."</p>
+                        </div>
+                        <div>
+                            <strong class="text-secondary-teal text-lg">조세연 학생</strong>
+                            <p class="interview-quote">"AI가 <span class="font-semibold">다양한 관점으로 생각</span>할 수 있도록 도와주는 점이 유익하다. 과제를 하다 막히는 부분이 있을 때 방향을 잡는 데 도움이 되고, 아이디어를 정리하거나 내용을 요약하는 기능도 자주 사용한다. 다만, 때때로 <span class="font-semibold">틀린 정보를 제공하는 경우가 있어 스스로 한 번 더 확인</span>하는 태도가 필요하다고 덧붙였다."</p>
+                        </div>
+                    </div>
+                    <p class="mt-6 text-sm text-gray-600">두 학생 모두 생성형 AI를 정보 탐색과 학습에 도움이 되는 도구로 인식하고 있었으며, 적절히 활용한다면 매우 유용한 수단이 될 수 있다는 데 공감했다.</p>
+                </div>
+            </section>
+
+            <section id="conclusion-suggestions" class="mb-12">
+                <h2 class="section-title">Ⅳ. 결론 및 제언</h2>
+                <div class="card mb-8">
+                    <h3 class="text-xl font-semibold text-primary-blue mb-3">가. 조사 결과 종합 및 주요 발견점</h3>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700">
+                        <li>학생들은 생성형 AI를 주로 <span class="highlight">학습 자료 검색, 새로운 경험 추구, 아이디어 구상</span> 등 다목적으로 활용하며 사용 시간은 <span class="highlight">짧고 집중적인 경향</span>을 보인다.</li>
+                        <li>학생들은 생성형 AI가 실제 목적 달성에 <span class="highlight">매우 유용하다고 인식</span>하며, 특히 정보 검색의 신속성과 다양한 아이디어 제공 능력을 높이 평가한다.</li>
+                        <li>생성형 AI가 제공하는 정보의 <span class="highlight">정확성에 대한 우려도 존재</span>하며, 사용자 스스로 비판적인 검토 과정이 필요함을 인지하고 있다.</li>
+                    </ul>
+                </div>
+                <div class="card mb-8">
+                    <h3 class="text-xl font-semibold text-primary-blue mb-3">나. 조사를 통해 새롭게 알게 된 점 및 느낀 점</h3>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700">
+                        <li>학생들은 주로 <span class="highlight">재미나 정보 탐색</span>을 위해 AI를 사용하는 것을 알게 되었다. 정보 탐색 뿐만 아니라 재미를 위해서도 AI를 활용한다는 점에서, 학생들은 AI를 일상 속에서도 친숙하게 이용하고 있음을 느낄 수 있었다.</li>
+                        <li>학생 대다수가 생성형 AI의 유용성에 대해 <span class="highlight">매우 긍정적으로 평가</span>하고 있다는 점은 주목할 만하며, 이는 AI 기술 수용도가 매우 높고 교육 현장에서의 적극적인 활용 가능성을 확인시켜 준다.</li>
+                        <li>긍정적 인식과 별개로, 학생들 스스로 AI 정보의 한계를 인지하고 <span class="highlight">비판적 검토의 필요성</span>을 느끼고 있다는 점은, AI 리터러시 교육의 중요성과 수용성을 동시에 확인시켜 주는 중요한 발견이다.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-primary-blue mb-4">다. 제언</h3>
+                    <div class="space-y-4">
+                        <div class="suggestion-item">
+                            <div class="suggestion-number">1</div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">적극적 학습 및 자신만의 활용 원칙 수립</h4>
+                                <p class="text-gray-700 text-sm">AI가 생성하는 정보의 특징과 한계를 스스로 학습하고 이해하려는 적극적인 노력이 필요하다. 예를 들어 AI가 제공하는 정보는 항상 최신이거나 맥락에 완벽히 부합하지 않을 수 있음을 인지하고, 다양한 AI 활용 윤리 가이드라인(예: 출처 명시, 표절 금지 등)을 찾아보며 자신만의 건강한 AI 활용 원칙을 세우고 실천해야 한다.</p>
+                            </div>
+                        </div>
+                        <div class="suggestion-item">
+                            <div class="suggestion-number">2</div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">능동적인 학습 및 창의적 파트너로 AI 활용</h4>
+                                <p class="text-gray-700 text-sm">단순한 정보 검색 도구로만 AI를 사용하는 것을 넘어 자신의 학습 목표와 창의적인 아이디어 발상을 위한 능동적인 파트너로 삼아 적극적으로 활용해 보기를 권장한다. 예를 들어 글쓰기나 코딩 과제 수행 시 AI에게 아이디어 구체화를 요청하거나 다양한 관점의 초안을 생성하도록 하여 이를 바탕으로 자신만의 결과물을 발전시키고 AI와 협력하여 새로운 콘텐츠(이야기, 디자인, 발표 자료 등)를 제작해보는 경험을 통해 창의적 문제 해결 역량을 길러야 한다.</p>
+                            </div>
+                        </div>
+                        <div class="suggestion-item">
+                            <div class="suggestion-number">3</div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">비판적 검토 및 교차 확인 생활화</h4>
+                                <p class="text-gray-700 text-sm">생성형 AI로부터 얻은 정보는 반드시 비판적으로 검토하고 교차 확인하는 습관을 생활화해야 한다. AI가 제시한 답변의 출처를 확인하거나, 최소 2개 이상의 다른 신뢰할 수 있는 정보원(교과서, 학술 자료, 전문가 의견 등)과 비교하여 사실 여부를 판단하고, 혹시 정보가 편향된 시각을 담고 있지는 않은지 스스로 질문하고 점검하는 과정을 거쳐야 한다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="text-center text-sm text-gray-500 mt-12 py-6 border-t border-gray-300">
+            <p>&copy; 2025 미림마이스터고등학교 1학년 6반 1조. All rights reserved.</p>
+            <p>본 인포그래픽은 "우리 반 학생들이 (생성형) AI 를 사용하는 이유" 보고서를 기반으로 제작되었습니다.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // This script is intended to be written as if converted from TypeScript.
+        // All Chart.js related logic is here.
+
+        const primaryBlue = '#2A62B6';
+        const secondaryTeal = '#4ECDC4';
+        const accentGrey = '#A9A9A9';
+        const supportingLightBlue = '#E0F2FE';
+        const darkText = '#263238';
+
+        /**
+         * Wraps text for chart labels if it's too long.
+         * @param {string} text The text to wrap.
+         * @param {number} maxWidth The maximum number of characters per line.
+         * @returns {string|string[]} The original text or an array of strings if wrapped.
+         */
+        function wrapText(text, maxWidth = 16) { // Default maxWidth set to 16 as per prompt
+            if (typeof text !== 'string') return text;
+            const words = text.split(' ');
+            let lines = [];
+            let currentLine = words[0];
+
+            for (let i = 1; i < words.length; i++) {
+                if ((currentLine + " " + words[i]).length > maxWidth) {
+                    lines.push(currentLine);
+                    currentLine = words[i];
+                } else {
+                    currentLine += " " + words[i];
+                }
+            }
+            lines.push(currentLine);
+            return lines.length > 1 ? lines : text; // Return array only if multiple lines
+        }
+        
+        const commonChartOptionsBase = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'top',
+                    labels: {
+                        font: { family: "'Noto Sans KR', sans-serif", size: 12 },
+                        color: darkText,
+                        padding: 15
+                    }
+                },
+                tooltip: {
+                    backgroundColor: 'rgba(0,0,0,0.75)',
+                    titleFont: { family: "'Noto Sans KR', sans-serif", size: 13, weight: 'bold' },
+                    bodyFont: { family: "'Noto Sans KR', sans-serif", size: 12 },
+                    padding: 10,
+                    cornerRadius: 4,
+                    callbacks: {
+                        label: function(context) {
+                            let label = context.dataset.label || '';
+                            if (label) {
+                                label += ': ';
+                            }
+                            let value = 0;
+                            if (context.chart.config.type === 'pie' || context.chart.config.type === 'doughnut') {
+                                value = context.parsed;
+                                label = context.label + ': ';
+                            } else {
+                                value = context.parsed.y;
+                            }
+                            if (value !== null) {
+                                label += value.toFixed(1) + '%';
+                            }
+                            return label;
+                        }
+                    }
+                }
+            }
+        };
+
+        const barAndLineChartOptions = {
+            ...commonChartOptionsBase,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        callback: function(value) { return value + '%'; },
+                        font: { family: "'Noto Sans KR', sans-serif", size: 11 },
+                        color: darkText,
+                    },
+                    grid: { color: '#e0e0e0' }
+                },
+                x: {
+                    ticks: {
+                        font: { family: "'Noto Sans KR', sans-serif", size: 11 },
+                        color: darkText,
+                        callback: function(value) {
+                            const label = this.getLabelForValue(value);
+                            return wrapText(label, 10); // Shorter wrap for x-axis labels if needed
+                        }
+                    },
+                    grid: { display: false }
+                }
+            }
+        };
+        
+        const pieAndDoughnutChartOptions = {
+            ...commonChartOptionsBase,
+             plugins: { // Re-define plugins to avoid inheriting scales
+                legend: commonChartOptionsBase.plugins.legend,
+                tooltip: commonChartOptionsBase.plugins.tooltip
+            }
+        };
+
+
+        // Chart 1: Usage Time
+        // const usageTimeCtx = document.getElementById('usageTimeChart').getContext('2d');
+        new Chart(usageTimeCtx, {
+            type: 'pie',
+            data: {
+                labels: ['30분 이하', '1시간', '1시간 30분', '2시간'],
+                datasets: [{
+                    label: 'AI 하루 사용 시간',
+                    data: [61.1, 22.2, 11.1, 5.6],
+                    backgroundColor: [secondaryTeal, supportingLightBlue, primaryBlue, accentGrey],
+                    borderColor: '#FFFFFF',
+                    borderWidth: 2
+                }]
+            },
+            options: pieAndDoughnutChartOptions
+        });
+
+        // Chart 2: Usage Reason
+        // const usageReasonCtx = document.getElementById('usageReasonChart').getContext('2d');
+        new Chart(usageReasonCtx, {
+            type: 'bar',
+            data: {
+                labels: ['과제나 학습 자료를\n찾는 데 도움이 돼서', '재미있거나 새로운\n경험을 할 수 있어서', '아이디어를 얻거나\n창작 활동에 영감을 얻기 위해서', '시간과 노력을\n절약할 수 있어서'],
+                datasets: [{
+                    label: 'AI 사용 이유',
+                    data: [33.3, 33.3, 27.8, 5.6],
+                    backgroundColor: [primaryBlue, secondaryTeal, supportingLightBlue, accentGrey],
+                    borderColor: [primaryBlue, secondaryTeal, supportingLightBlue, accentGrey],
+                    borderWidth: 1,
+                    borderRadius: 4,
+                    barPercentage: 0.6,
+                    categoryPercentage: 0.7
+                }]
+            },
+            options: {
+                ...barAndLineChartOptions,
+                scales: {
+                    ...barAndLineChartOptions.scales,
+                    x: {
+                        ...barAndLineChartOptions.scales.x,
+                        ticks: {
+                            ...barAndLineChartOptions.scales.x.ticks,
+                            callback: function(value) { // Custom callback for Q2 labels
+                                const label = this.getLabelForValue(value);
+                                // Split labels with '\n' for manual line breaks
+                                return label.split('\n');
+                            },
+                            font: { family: "'Noto Sans KR', sans-serif", size: 10 }, // Slightly smaller for multi-line
+                        }
+                    }
+                }
+            }
+        });
+
+        // Chart 3: Helpfulness
+        // const helpfulnessCtx = document.getElementById('helpfulnessChart').getContext('2d');
+        new Chart(helpfulnessCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['매우 도움 됨 (5점)', '도움 됨 (4점)'],
+                datasets: [{
+                    label: 'AI 도움 정도',
+                    data: [61.1, 38.9],
+                    backgroundColor: [primaryBlue, secondaryTeal],
+                    borderColor: '#FFFFFF',
+                    borderWidth: 2
+                }]
+            },
+            options: pieAndDoughnutChartOptions
+        });
+
+    </script>
+    </body>
+</html>
