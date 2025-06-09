@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <!--
   Infographic Title: 우리 반 학생들이 (생성형) AI 를 사용하는 이유
-  Date: 2025-05-30
-  Version: 2.0
+  Date: 2025-06-07
+  Version: 2.2 (Second Image Added)
   Description: This HTML file contains an updated infographic summarizing a student research report on AI usage.
                It includes all necessary HTML, CSS (Tailwind CSS via CDN and custom styles), and JavaScript (for Chart.js).
 -->
@@ -24,7 +24,6 @@
             position: relative; /* Required for Chart.js responsiveness */
             margin: auto;
         }
-        /* Custom colors for Tailwind config (if needed, but we'll use them directly or via CSS vars if complex) */
         :root {
             --primary-blue: #2A62B6;
             --secondary-teal: #4ECDC4;
@@ -80,10 +79,9 @@
             color: var(--secondary-teal);
             font-weight: 700;
         }
-        /* For HTML/CSS Diagram - Investigation Plan */
         .plan-step {
             display: flex;
-            align-items: flex-start; /* Align items to the start for potentially multi-line text */
+            align-items: flex-start;
             background-color: var(--supporting-light-blue);
             padding: 1rem;
             border-radius: 0.375rem; /* rounded-md */
@@ -91,42 +89,41 @@
         }
         .plan-step-icon {
             flex-shrink: 0;
-            width: 2.5rem; /* w-10 */
-            height: 2.5rem; /* h-10 */
-            border-radius: 9999px; /* rounded-full */
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 9999px;
             background-color: var(--secondary-teal);
             color: white;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: bold;
-            margin-right: 1rem; /* mr-4 */
-            margin-top: 0.125rem; /* mt-0.5 to align better with text */
+            margin-right: 1rem;
+            margin-top: 0.125rem;
         }
         .interview-quote {
             border-left: 4px solid var(--secondary-teal);
-            padding-left: 1rem; /* pl-4 */
-            margin-top: 0.5rem; /* mt-2 */
+            padding-left: 1rem;
             font-style: italic;
-            color: #4A5568; /* text-gray-700 */
+            color: #4A5568;
         }
         .suggestion-item {
             display: flex;
             align-items: flex-start;
-            margin-bottom: 1rem; /* mb-4 */
+            margin-bottom: 1rem;
         }
         .suggestion-number {
             flex-shrink: 0;
-            width: 2rem; /* w-8 */
-            height: 2rem; /* h-8 */
-            border-radius: 9999px; /* rounded-full */
+            width: 2rem;
+            height: 2rem;
+            border-radius: 9999px;
             background-color: var(--primary-blue);
             color: white;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: bold;
-            margin-right: 1rem; /* mr-4 */
+            margin-right: 1rem;
         }
     </style>
 </head>
@@ -140,6 +137,7 @@
         </header>
 
         <main>
+            <!-- Section: Investigation Motivation and Purpose -->
             <section id="motivation-purpose" class="mb-12">
                 <h2 class="section-title">Ⅰ. 조사 동기와 목적</h2>
                 <div class="card">
@@ -148,6 +146,8 @@
                 </div>
             </section>
 
+            <!-- Section: Investigation Plan -->
+            <!-- DIAGRAM: Investigation Plan Flow -->
             <section id="investigation-plan" class="mb-12">
                 <h2 class="section-title">Ⅱ. 조사 계획</h2>
                 <div class="card">
@@ -184,6 +184,7 @@
                 </div>
             </section>
 
+            <!-- Section: Investigation Results -->
             <section id="results" class="mb-12">
                 <h2 class="section-title">Ⅲ. 조사 결과</h2>
 
@@ -191,6 +192,7 @@
                     <h3 class="text-xl font-semibold text-primary-blue mb-4">설문조사 결과</h3>
                     <p class="mb-6 text-gray-700">1학년 6반 학생 18명을 대상으로 생성형 AI 사용에 대한 설문조사를 진행했다.</p>
 
+                    <!-- CHART: Q1. Daily Usage Time of Generative AI -->
                     <div class="mb-10">
                         <h4 class="text-lg font-medium text-gray-800 mb-1">Q1. 생성형 AI(예: 챗GPT, Gemini 등)를 하루에 어느 정도 사용하나요?</h4>
                         <p class="text-sm text-gray-600 mb-3">학생들의 <span class="highlight">61.1%</span>가 하루 AI 사용 시간이 <span class="highlight">30분 이하</span>라고 답해, 주로 간단한 용도로 사용됨을 나타낸다. 2시간 이상 사용자는 없었다.</p>
@@ -199,6 +201,7 @@
                         </div>
                     </div>
 
+                    <!-- CHART: Q2. Reasons for Using AI -->
                     <div class="mb-10">
                         <h4 class="text-lg font-medium text-gray-800 mb-1">Q2. 평소에 인공지능(AI)을 사용하는 이유는 무엇인가요? (하나만 선택)</h4>
                         <p class="text-sm text-gray-600 mb-3"><span class="highlight">과제나 학습 자료 도움(33.3%)</span>과 <span class="highlight">재미있거나 새로운 경험(33.3%)</span>이 가장 높은 비율을 차지했다. 아이디어/창작 영감(27.8%), 시간/노력 절약(5.6%) 순으로 나타났다.</p>
@@ -207,6 +210,7 @@
                         </div>
                     </div>
 
+                    <!-- CHART: Q3. Helpfulness of Generative AI -->
                     <div>
                         <h4 class="text-lg font-medium text-gray-800 mb-1">Q3. 생성형 AI가 귀하의 목적(예: 학습, 아이디어 얻기 등)에 얼마나 도움이 된다고 생각하나요?</h4>
                          <p class="text-sm text-gray-600 mb-3">모든 응답자가 AI가 목적 달성에 도움이 된다고 평가했다. <span class="highlight">61.1%는 '매우 도움 됨'(5점)</span>, 38.9%는 '도움 됨'(4점)을 선택했으며, 부정적인 응답은 없었다.</p>
@@ -219,20 +223,37 @@
                 <div class="card">
                     <h3 class="text-xl font-semibold text-primary-blue mb-4">인터뷰 조사 결과 요약</h3>
                     <p class="mb-4 text-gray-700">설문 응답자 중 2명(송지영, 조세연 학생)을 대상으로 생성형 AI 사용 경험에 대한 심층 인터뷰를 진행했다. 주요 내용은 다음과 같다.</p>
-                    <div class="space-y-6">
+                    <div class="space-y-8">
                         <div>
                             <strong class="text-secondary-teal text-lg">송지영 학생</strong>
-                            <p class="interview-quote">"생성형 AI의 가장 큰 장점은 정보를 <span class="font-semibold">빠르고 간편하게</span> 얻을 수 있다는 점이다. 궁금한 점이 생겼을 때 짧은 시간 안에 원하는 답을 찾을 수 있어 공부할 때나 일상생활에서 유용하게 활용하고 있다. 특히 <span class="font-semibold">정리된 형태로 정보를 제공</span>받을 수 있어 효율적이라는 점을 강조했다."</p>
+                            <div class="mt-3 flex flex-col md:flex-row items-start gap-4">
+                                <img src="여기에_복사한_BASE64_코드를_붙여넣어주세요" 
+                                     alt="송지영 학생 인터뷰 사진" 
+                                     class="w-full md:w-48 rounded-lg shadow-md object-cover self-center md:self-start">
+                                <div class="flex-1">
+                                    <p class="interview-quote">"생성형 AI의 가장 큰 장점은 정보를 <span class="font-semibold">빠르고 간편하게</span> 얻을 수 있다는 점이다. 궁금한 점이 생겼을 때 짧은 시간 안에 원하는 답을 찾을 수 있어 공부할 때나 일상생활에서 유용하게 활용하고 있다. 특히 <span class="font-semibold">정리된 형태로 정보를 제공</span>받을 수 있어 효율적이라는 점을 강조했다."</p>
+                                </div>
+                            </div>
                         </div>
                         <div>
                             <strong class="text-secondary-teal text-lg">조세연 학생</strong>
-                            <p class="interview-quote">"AI가 <span class="font-semibold">다양한 관점으로 생각</span>할 수 있도록 도와주는 점이 유익하다. 과제를 하다 막히는 부분이 있을 때 방향을 잡는 데 도움이 되고, 아이디어를 정리하거나 내용을 요약하는 기능도 자주 사용한다. 다만, 때때로 <span class="font-semibold">틀린 정보를 제공하는 경우가 있어 스스로 한 번 더 확인</span>하는 태도가 필요하다고 덧붙였다."</p>
+                            <div class="mt-3 flex flex-col md:flex-row-reverse items-start gap-4">
+                                <!-- ▼▼▼ 이미지 삽입 영역 ▼▼▼ -->
+                                <img src="여기에_조세연_학생_BASE64_코드를_붙여넣어주세요"
+                                     alt="조세연 학생 인터뷰 사진"
+                                     class="w-full md:w-48 rounded-lg shadow-md object-cover self-center md:self-start">
+                                <!-- ▲▲▲ 이미지 삽입 영역 ▲▲▲ -->
+                                <div class="flex-1">
+                                    <p class="interview-quote">"AI가 <span class="font-semibold">다양한 관점으로 생각</span>할 수 있도록 도와주는 점이 유익하다. 과제를 하다 막히는 부분이 있을 때 방향을 잡는 데 도움이 되고, 아이디어를 정리하거나 내용을 요약하는 기능도 자주 사용한다. 다만, 때때로 <span class="font-semibold">틀린 정보를 제공하는 경우가 있어 스스로 한 번 더 확인</span>하는 태도가 필요하다고 덧붙였다."</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <p class="mt-6 text-sm text-gray-600">두 학생 모두 생성형 AI를 정보 탐색과 학습에 도움이 되는 도구로 인식하고 있었으며, 적절히 활용한다면 매우 유용한 수단이 될 수 있다는 데 공감했다.</p>
                 </div>
             </section>
 
+            <!-- Section: Conclusion and Suggestions -->
             <section id="conclusion-suggestions" class="mb-12">
                 <h2 class="section-title">Ⅳ. 결론 및 제언</h2>
                 <div class="card mb-8">
@@ -297,13 +318,7 @@
         const supportingLightBlue = '#E0F2FE';
         const darkText = '#263238';
 
-        /**
-         * Wraps text for chart labels if it's too long.
-         * @param {string} text The text to wrap.
-         * @param {number} maxWidth The maximum number of characters per line.
-         * @returns {string|string[]} The original text or an array of strings if wrapped.
-         */
-        function wrapText(text, maxWidth = 16) { // Default maxWidth set to 16 as per prompt
+        function wrapText(text, maxWidth = 16) {
             if (typeof text !== 'string') return text;
             const words = text.split(' ');
             let lines = [];
@@ -318,7 +333,7 @@
                 }
             }
             lines.push(currentLine);
-            return lines.length > 1 ? lines : text; // Return array only if multiple lines
+            return lines.length > 1 ? lines : text;
         }
         
         const commonChartOptionsBase = {
@@ -380,7 +395,7 @@
                         color: darkText,
                         callback: function(value) {
                             const label = this.getLabelForValue(value);
-                            return wrapText(label, 10); // Shorter wrap for x-axis labels if needed
+                            return wrapText(label, 10);
                         }
                     },
                     grid: { display: false }
@@ -390,7 +405,7 @@
         
         const pieAndDoughnutChartOptions = {
             ...commonChartOptionsBase,
-             plugins: { // Re-define plugins to avoid inheriting scales
+             plugins: {
                 legend: commonChartOptionsBase.plugins.legend,
                 tooltip: commonChartOptionsBase.plugins.tooltip
             }
@@ -398,7 +413,7 @@
 
 
         // Chart 1: Usage Time
-        // const usageTimeCtx = document.getElementById('usageTimeChart').getContext('2d');
+        const usageTimeCtx = document.getElementById('usageTimeChart').getContext('2d');
         new Chart(usageTimeCtx, {
             type: 'pie',
             data: {
@@ -415,7 +430,7 @@
         });
 
         // Chart 2: Usage Reason
-        // const usageReasonCtx = document.getElementById('usageReasonChart').getContext('2d');
+        const usageReasonCtx = document.getElementById('usageReasonChart').getContext('2d');
         new Chart(usageReasonCtx, {
             type: 'bar',
             data: {
@@ -439,12 +454,11 @@
                         ...barAndLineChartOptions.scales.x,
                         ticks: {
                             ...barAndLineChartOptions.scales.x.ticks,
-                            callback: function(value) { // Custom callback for Q2 labels
+                            callback: function(value) {
                                 const label = this.getLabelForValue(value);
-                                // Split labels with '\n' for manual line breaks
                                 return label.split('\n');
                             },
-                            font: { family: "'Noto Sans KR', sans-serif", size: 10 }, // Slightly smaller for multi-line
+                            font: { family: "'Noto Sans KR', sans-serif", size: 10 },
                         }
                     }
                 }
@@ -452,7 +466,7 @@
         });
 
         // Chart 3: Helpfulness
-        // const helpfulnessCtx = document.getElementById('helpfulnessChart').getContext('2d');
+        const helpfulnessCtx = document.getElementById('helpfulnessChart').getContext('2d');
         new Chart(helpfulnessCtx, {
             type: 'doughnut',
             data: {
@@ -469,5 +483,7 @@
         });
 
     </script>
-    </body>
+    <!-- 이 인포그래픽은 학생 보고서 내용을 기반으로 생성되었으며, 모든 콘텐츠는 단일 HTML 파일에 포함되어 있습니다. -->
+    <!-- 최종 산출물 버전: 2.2 / 생성일: 2025-06-07 -->
+</body>
 </html>
